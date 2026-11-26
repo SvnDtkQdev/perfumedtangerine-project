@@ -4,7 +4,7 @@
 
 > **Terminal NTFS diagnostics & repair for Linux  
 > Menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
-> Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn` 
+> Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn`                 
 > npm required**
 
 
