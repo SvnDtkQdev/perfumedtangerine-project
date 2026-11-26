@@ -1,6 +1,6 @@
 # NTFS-REPAIR
 
- Version `13.0.9`** · Author: Svn DtkQdev
+ Version `13.0.9` · Svn DtkQdev
 
 > **Terminal NTFS diagnostics & repair for Linux  
 > Menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
