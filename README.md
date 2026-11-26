@@ -11,12 +11,12 @@
 
 ## Table of contents
 
-1. [About](#about)
-3. [Requirements](#requirements)
-5. [Install](#install)
-6. [Run](#run)
-9. [Options reference](#options-reference)
-0. [Safety](#safety)
+ 1. [About](#about)
+ 3. [Requirements](#requirements)
+ 5. [Install](#install)
+ 6. [Run](#run)
+ 9. [Options reference](#options-reference)
+ 0. [Safety](#safety)
 11. [Dependencies](#dependencies)
 13. [Project layout](#project-layout)
 15. [Limits](#limits)
