@@ -7,7 +7,7 @@
                                                
 
 
-## Table of contents
+ Table of contents
 
 Hx 1. [About](#about)    
 Hx 3. [Requirements](#requirements)   
@@ -60,10 +60,10 @@ sudo bash ./install.sh
 
 > **What `install.sh` does**
 >
-> E 1. `npm install` (Node packages)  
-> E 3.  System packages via **pacman / apt / dnf / zypper**  `ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
-> E 6.  Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
-> E 9.  If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
+> > E1. `npm install` (Node packages)  
+> > E3.  System packages via **pacman / apt / dnf / zypper**  `ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
+> > E6.  Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
+> > E9.  If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
 
 
 ---
