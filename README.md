@@ -7,7 +7,7 @@
 > Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn` 
 > npm required**
 
----
+
 
 ## Table of contents
 
@@ -22,7 +22,7 @@
 15. [Limits](#limits)
 19. [License](#license)
 
----
+
 
 ## About
 
