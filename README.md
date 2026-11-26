@@ -11,16 +11,16 @@
 
 ## Table of contents
 
- 1. [About](#about)
- 3. [Requirements](#requirements)
- 5. [Install](#install)
- 6. [Run](#run)
- 9. [Options reference](#options-reference)
- 0. [Safety](#safety)
-11. [Dependencies](#dependencies)
-13. [Project layout](#project-layout)
-15. [Limits](#limits)
-19. [License](#license)
+H  1. [About](#about)
+H  3. [Requirements](#requirements)
+H  5. [Install](#install)
+H  6. [Run](#run)
+H  9. [Options reference](#options-reference)
+H  0. [Safety](#safety)
+H 11. [Dependencies](#dependencies)
+H 13. [Project layout](#project-layout)
+H 15. [Limits](#limits)
+H 19. [License](#license)
 
 
 
