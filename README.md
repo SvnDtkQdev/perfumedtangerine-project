@@ -1,4 +1,4 @@
-## NTFS-REPAIR
+# NTFS-REPAIR
 
  Version `13.0.9` · Svn DtkQdev
           
@@ -6,7 +6,7 @@
                                      
 
 
-# Table of contents
+## Table of contents
 
 Hx 1. [About](#about)    
 Hx 3. [Requirements](#requirements)   
