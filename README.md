@@ -2,11 +2,6 @@
 
  Version `13.0.9` · Svn DtkQdev
 
-> **terminal NTFS diagnostics & repair for Linux  
-> menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
-> global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn`                 
-> npm required**
-
 
 
 ## Table of contents
@@ -63,9 +58,9 @@ sudo bash ./install.sh
 > **What `install.sh` does**
 >
 > 1. `npm install` (Node packages)  
-> 2.  System packages via **pacman / apt / dnf / zypper**  `ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
-> 3.  Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
-> 4.  If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
+> 3.  System packages via **pacman / apt / dnf / zypper**  `ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
+> 6.  Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
+> 9.  If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
 
 
 ---
@@ -117,7 +112,7 @@ sudo ksvn
 | **util-linux** | `lsblk`, `blkid`, `findmnt`, `mount`, `umount`, `blockdev` |
 | **psmisc / coreutils** | `fuser`, `dd`, `sync` |
 
-### Node (npm)
+### Node (npm) required
 
 `inquirer` · `chalk` · `figlet` · `gradient-string` · `boxen` · `static-chafa` · `ora` / `cli-spinners`
 
