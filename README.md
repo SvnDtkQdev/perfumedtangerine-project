@@ -1,26 +1,26 @@
 # NTFS-REPAIR
 
-**Version `13.0.9`** · **Author: Svn DtkQdev**
+ Version `13.0.9`** · Author: Svn DtkQdev
 
-> **Terminal NTFS diagnostics & repair for Linux**  
+> **Terminal NTFS diagnostics & repair for Linux  
 > Menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
 > Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn` 
-> npm required
+> npm required**
 
 ---
 
 ## Table of contents
 
 1. [About](#about)
-2. [Requirements](#requirements)
-3. [Install](#install)
-4. [Run](#run)
-6. [Options reference](#options-reference)
-8. [Safety](#safety)
-9. [Dependencies](#dependencies)
-10. [Project layout](#project-layout)
-11. [Limits](#limits)
-12. [License](#license)
+3. [Requirements](#requirements)
+5. [Install](#install)
+6. [Run](#run)
+9. [Options reference](#options-reference)
+0. [Safety](#safety)
+11. [Dependencies](#dependencies)
+13. [Project layout](#project-layout)
+15. [Limits](#limits)
+19. [License](#license)
 
 ---
 
@@ -35,12 +35,11 @@
 | **Goal** | Dirty flag / hibernation / light corruption / force mount |
 | **Not a clone of** | Microsoft `chkdsk` (deep MFT rebuild still needs Windows) |
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Backup important data before any write operation.      │
-│  Some stages change on-disk NTFS metadata.              │
-└─────────────────────────────────────────────────────────┘
-```
+
+
+  Backup important data before any write operation. 
+  Some stages change on-disk NTFS metadata.      
+
 
 ---
 
@@ -103,34 +102,6 @@ sudo ksvn
 | **15** | chkdsk NTFS fix - beta | Full multi-stage Linux kit (offline → multi-pass fix → hiber → scan → RW verify → last resort) |
 | **16** | dd fix bad blocks | **Dangerous** targeted block overwrite |
 | **17** | force mount | **Data loss assumed** — aggressive force RW mount only (no safe path) |
-
-### Option 1 — volume list
-
-Each line can include:
-
-- Device path (`/dev/sdXN`)
-- Partition size
-- **Company / disk name** (vendor + model)
-- Disk total size
-- Volume label
-- Mount point / ro / transport
-
-Confirm selection by ticking volumes **and** **← Back (keep current selection)**, then **ENTER**.
-
-### Option 15 — chkdsk kit (summary)
-
-```
-Stage 0   Force offline (unmount / fuser / blockdev)
-Stage 1   Diagnose (ntfsfix -n)
-Stage 2–5 Multi-pass fix + dirty + bad-sector list
-Stage 6   Hibernation remove_hiberfile cycle
-Stage 7   Structure / MFT probe
-Stage 8   Surface scan (badblocks read-only)
-Stage 9   Final passes
-Stage 10  RO / RW + write test
-Stage 11+ Last-resort recovery if needed
-```
-
 
 
 ---
