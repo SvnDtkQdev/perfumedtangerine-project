@@ -66,10 +66,9 @@ sudo bash ./install.sh
 > **What `install.sh` does**
 >
 > 1. `npm install` (Node packages)  
-> 2. System packages via **pacman / apt / dnf / zypper**  
->    (`ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
-> 3. Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
-> 4. If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
+> 2.  System packages via **pacman / apt / dnf / zypper**  `ntfs-3g`, `e2fsprogs` / `badblocks`, `util-linux`, …)  
+> 3.  Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
+> 4.  If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
 
 
 ---
