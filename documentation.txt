@@ -1,5 +1,5 @@
 ================================================================================
-  NTFS-REPAIR  ·  Documentation  ·  Version 13.0.9  ·  Author: Svn DtkQdev
+  NTFS-REPAIR  ·  Documentation  ·  Version 13.0.9  ·   Svn DtkQdev
 ================================================================================
 
   Terminal NTFS diagnostics & repair helper for Linux.
@@ -77,13 +77,6 @@
   doesn't repair NTFS metadata. System avoid its write mode on a disk
   containing data, because it overwrites data.
 
---------------------------------------------------------------------------------
-  PROGRESS BAR
---------------------------------------------------------------------------------
-
-  [----------------------------->$]
-  [ ] yellow   - orange   > green   $ red   # grey
-  End: last # replaced, then cyan *** for 3 seconds
 
 --------------------------------------------------------------------------------
   SAFETY
