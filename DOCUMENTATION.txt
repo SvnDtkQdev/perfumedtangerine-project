@@ -1,0 +1,107 @@
+================================================================================
+  NTFS-REPAIR  ·  Documentation  ·  Version 13.0.9  ·  Author: Svn DtkQdev
+================================================================================
+
+  Terminal NTFS diagnostics & repair helper for Linux.
+  Commands after install:  ntfs-repair  |  ksvn  |  ntfsre-pair
+
+--------------------------------------------------------------------------------
+  QUICK START
+--------------------------------------------------------------------------------
+
+  unzip ntfsrepairclone-13.0.9-full.zip
+  cd ntfsrepairclone
+  sudo bash ./install.sh
+  sudo ./ntfs-repair
+
+--------------------------------------------------------------------------------
+  ABOUT
+--------------------------------------------------------------------------------
+
+  Menu-driven TUI for NTFS volumes (USB, external disks, dual-boot).
+  Uses ntfsfix, ntfs-3g, ntfsinfo, badblocks, lsblk, blkid, and more.
+  Best-effort repair without Windows when possible.
+  Severe MFT damage may still need Windows:  chkdsk X: /f /r
+
+--------------------------------------------------------------------------------
+  INSTALL
+--------------------------------------------------------------------------------
+
+  install.sh:
+    [1] npm install
+    [2] system packages (pacman | apt | dnf | zypper)
+        ntfs-3g / ntfsprogs, e2fsprogs (badblocks), util-linux, ...
+    [3] global bins: ntfs-repair, ksvn, ntfsre-pair
+    [4] if ntfsfix missing → install-system-deps.sh (./deps)
+
+--------------------------------------------------------------------------------
+  MAIN MENU UI
+--------------------------------------------------------------------------------
+
+  * Title NTFS-REPAIR + key image (redkeys.png)
+  * Selected volumes: /dev/sdXN (Company Name "label" size)
+  * Options 01–17 with white [brackets]; completed = colored marker char
+  * Terminal fully cleared on every menu change / return to main
+
+--------------------------------------------------------------------------------
+  OPTIONS
+--------------------------------------------------------------------------------
+
+   1  select NTFS volume     multi-select; company name, sizes, label
+   2  auto-fix               multi-pass ntfsfix + hiber + RW verify
+   3  check filesystem integrity     read-only
+   4  check mounting errors  full report on result screen; clean main menu
+   5  fix read-only mount
+   6  bad blocks fix         RO scan + helpers
+   7  repair MFT
+   8  rebuild $Bitmap
+   9  fix $LogFile
+  10  clear dirty flag
+  11  informations           version 13.0.9, author, all deps
+  12  system dependencies
+  13  help & usage
+  14  advanced options
+  15  chkdsk NTFS fix - beta full multi-stage Linux kit
+  16  dd fix bad blocks      DANGEROUS targeted overwrite
+  17  force mount            DATA LOSS ASSUMED — force RW only
+
+--------------------------------------------------------------------------------
+  OPTION 17 WARNING (in-app)
+--------------------------------------------------------------------------------
+
+  Linux already has NTFS drivers that can read and write NTFS, and the
+  kernel's ntfs3 driver supports journal replay. But a driver's job is
+  normal filesystem access—not necessarily discovering and safely
+  repairing every possible contradiction in a damaged filesystem.
+  badblocks is different: it checks a drive for unreadable blocks; it
+  doesn't repair NTFS metadata. System avoid its write mode on a disk
+  containing data, because it overwrites data.
+
+--------------------------------------------------------------------------------
+  PROGRESS BAR
+--------------------------------------------------------------------------------
+
+  [----------------------------->$]
+  [ ] yellow   - orange   > green   $ red   # grey
+  End: last # replaced, then cyan *** for 3 seconds
+
+--------------------------------------------------------------------------------
+  SAFETY
+--------------------------------------------------------------------------------
+
+  * Backup data before write repairs
+  * Prefer options 3/4 before 2/15/16/17
+  * Options 16 and 17 can destroy data
+  * Not a full Microsoft chkdsk replacement
+
+--------------------------------------------------------------------------------
+  DEPENDENCIES
+--------------------------------------------------------------------------------
+
+  System: ntfsfix, ntfs-3g, ntfsinfo, mkntfs, badblocks,
+          blkid, lsblk, findmnt, mount, umount, dd, blockdev, fuser
+  Node:   inquirer, chalk, figlet, gradient-string, boxen, static-chafa
+
+================================================================================
+  NTFS-REPAIR 13.0.9  ·  Svn DtkQdev  ·  MIT
+================================================================================
