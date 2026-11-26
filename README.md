@@ -141,7 +141,6 @@ ntfsrepairclone/
 
 ## Limits
 
-> **Honest limits**
 >
 > - Linux **cannot** fully replace Microsoft **chkdsk** for every NTFS inconsistency.  
 > - Cluster remapping and complex MFT rebuilds may require **Windows**.  
