@@ -2,9 +2,9 @@
 
  Version `13.0.9` · Svn DtkQdev
 
-> **Terminal NTFS diagnostics & repair for Linux  
-> Menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
-> Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn`                 
+> **terminal NTFS diagnostics & repair for Linux  
+> menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
+> global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn`                 
 > npm required**
 
 
