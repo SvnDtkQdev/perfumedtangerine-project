@@ -4,7 +4,7 @@
 
 > **Terminal NTFS diagnostics & repair for Linux**  
 > Menu-driven TUI · multi-volume · progress bars · best-effort repair kits  
-> Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn`
+> Global commands: `ntfs-repair` · `ntfsre-pair` · `ksvn` 
 > npm required
 
 ---
@@ -71,18 +71,10 @@ sudo bash ./install.sh
 > 3. Global commands: `ntfs-repair`, `ksvn`, `ntfsre-pair`  
 > 4. If `ntfsfix` is still missing → optional `./install-system-deps.sh` (source build into `./deps`)
 
-**Local run without global install:**
-
-```bash
-sudo ./ntfs-repair
-# aliases in the same folder:
-sudo ./ksvn
-sudo ./ntfsre-pair
-```
 
 ---
 
-## Run
+## Run commands to open ntfs-repair interface menu:
 
 ```bash
 sudo ntfs-repair
@@ -91,37 +83,7 @@ sudo ksvn
 
 ```
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Workflow (recommended)                                 │
-│  1. Option 1 — select volume(s) + tick Back + ENTER     │
-│  2. Option 4 — check mounting errors (diagnose first)   │
-│  3. Option 2 or 15 — auto-fix / chkdsk kit             │
-│  4. Option 17 — force mount only if you accept data risk│
-└─────────────────────────────────────────────────────────┘
-```
 
----
-
-## Main menu
-
-After start you see:
-
-- **Title:** `NTFS-REPAIR` (figlet + gradient)
-- **Key image:** `redkeys.png` (terminal art, fixed aspect ratio, high quality)
-- **Selected volumes:** e.g. `/dev/sdb1 (SanDisk Ultra "DATA" 28.6GB)`
-- **Option list:** markers `[x] 01 …` — brackets always **white**; completed options get a **random colored** marker character
-- **Clean screen** on every menu enter and return (no leftover text from option 4)
-
-**Markers**
-
-| State | Look |
-|--------|------|
-| Initial | White random char inside white `[ ]` |
-| After complete | New random char + **random color** (brackets stay white) |
-| App restart | All markers reset |
-
----
 
 ## Options reference
 
@@ -172,61 +134,7 @@ Stage 10  RO / RW + write test
 Stage 11+ Last-resort recovery if needed
 ```
 
-### Option 17 — force mount
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  WARNING (shown in-app before confirm)                  │
-│                                                         │
-│  Linux already has NTFS drivers that can read and write │
-│  NTFS, and the kernel’s ntfs3 driver supports journal   │
-│  replay. But a driver’s job is normal filesystem        │
-│  access—not necessarily discovering and safely          │
-│  repairing every possible contradiction in a damaged    │
-│  filesystem. badblocks is different: it checks a drive  │
-│  for unreadable blocks; it doesn’t repair NTFS          │
-│  metadata. System avoid its write mode on a disk        │
-│  containing data, because it overwrites data.           │
-└─────────────────────────────────────────────────────────┘
-```
-
-**Double confirm** required. Path: force unmount → multi-pass `ntfsfix` → **read-only** `badblocks` (never `-w`) → force mount (`force,rw,remove_hiberfile`, …) → write test.
-
----
-
-## Progress bar
-
-Shared wide bar on all work screens:
-
-```
-[----------------------------->$]
-```
-
-| Char | Color |
-|------|--------|
-| `[` `]` | Yellow |
-| `-` | Orange |
-| `>` | Green |
-| `$` | Red |
-| `#` | Grey |
-
-When the head reaches the end, the last `#` is replaced, then the bar becomes cyan `*` for **3 seconds**.
-
----
-
-## Safety
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  • Prefer diagnose (3, 4) before write repairs          │
-│  • Unmount volumes when possible before write stages    │
-│  • Option 16 / 17 can destroy data — confirm carefully  │
-│  • Windows Fast Startup / hibernation often causes      │
-│    “dirty” USB mounts — full Windows Shut down helps    │
-│  • Deep MFT/index damage may still need:                │
-│      chkdsk X: /f /r   (from Windows)                   │
-└─────────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -279,11 +187,3 @@ ntfsrepairclone/
 ## License
 
 **MIT** (see `package.json`)
-
----
-
-**NTFS-REPAIR `13.0.9`** · **Svn DtkQdev** · **svn**
-
-```
-sudo ntfs-repair
-```
